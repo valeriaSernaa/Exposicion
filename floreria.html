@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floreria</title>
+</head>
+    <title>Florería REM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #00027a;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #00027a;
+            color: #4f97f5;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color:  #3bd6f1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #00027a;
+            color: #3bd6f1;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(255, 255, 124); " >
+    <header>
+        <i><h1><p style="color: #f1f3f5;">FLORERIA REM</p></h1></i>
+       <tt> <h1><p style="color: #f1f3f5;">La hora actual es:</h1></p></tt>
+<p id="hora"></p>
+<audio id="audioPlayer" controls>
+    <source src="C:\Users\fuego\Downloads\ssstik.io_1715390458588.mp3">
+    Tu navegador no soporta la reproducción de audio. </audio>
+    
+<script>
+function mostrarHora() {
+  var fecha = new Date();
+  var hora = fecha.getHours();
+  var minutos = fecha.getMinutes();
+  var segundos = fecha.getSeconds();
+  var formatoHora = hora + ":" + minutos + ":" + segundos;
+  document.getElementById("hora").innerText = formatoHora;
+}
+
+// Actualiza la hora cada segundo
+setInterval(mostrarHora, 1000);
+
+// Mostrar la hora al cargar la página
+mostrarHora();
+</script>
+
+    </header>
+    <nav>
+    <h1><a href="acercade.html">Acerca de</a>
+        <a href="produc.html">Productos</a>
+        <a href="contactanos.html">Contacto</a>
+        <a href="clientesfre.html">Clientes Frecuentes</a>
+        <a href="precios.html">Comprobar Precios</a></h1>
+    </nav>
+    <section>
+        <center>
+            <tt><h1><p style="color: #00027a;">De donde nos conoces</h1></tt></p>
+            <p>
+                <input type="radio" name="status" value="Me lo recomendaron" id="interesado"> <label for="interesado">Me lo recomendaron</label> 
+                <br>
+                <input type="radio" name="status" value="De redes sociales" id="indeciso"> <label for="indeciso">De redes sociales</label> 
+                <br>
+                <input type="radio" name="status" value="Publicidad en las calles" id="no_interesado"> <label for="no_interesado">Publicidad en las calles</label> 
+            </p>
+            <button id="mostrar">Enviar</button>
+        
+            <script>
+                document.getElementById('mostrar').addEventListener('click', function() {
+                    // let valorActivo = document.querySelector('input[name="status"]:checked').value;
+                    let elementoActivo = document.querySelector('input[name="status"]:checked');
+        
+                    if(elementoActivo) {
+                        alert(elementoActivo.value);
+                    } else {
+                        alert('No hay ninún elemento activo');
+                    }
+                });
+        
+                document.getElementById('setear').addEventListener('click', function() {
+                    setRadio('status', 'interesado')
+                });
+                function setRadio(name, value) {
+                    document.querySelectorAll(`input[name="${name}"]`).forEach(element => {
+                        if(element.value === value) {
+                            element.checked = true;
+                        }
+                    });
+                }
+</script>
+        
+
+
+        <h2><p style="color: #00027a;">Bienvenido a Florería REM  </h2></p>
+       <h1> <i><p style="color: #007bff;">Somos una florería especializada en la venta de hermosas flores frescas para toda ocasión.</p>
+        <p style="color: #007bff;">Visita nuestra sección de productos para ver nuestra variedad de arreglos florales.</p></i></h1>
+        <img src="C:\Users\fuego\Downloads\flore.jpg">
+    </section>
+    <footer>
+        <p>&copy; 2024 Florería REM. Todos los derechos reservados.</p>
+        
+    </footer>
+</body>
+</html>

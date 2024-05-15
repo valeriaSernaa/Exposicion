@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Precios</title>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #00027a;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #00027a;
+            color: #4f97f5;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color:  #3bd6f1;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        section {
+            padding: 20px;
+        }
+        footer {
+            background-color: #00027a;
+            color: #3bd6f1;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        </style>
+    </head>
+    <body style="background-color:rgb(255, 255, 124); ">
+    
+    <header>
+        <i><h1><p style="color: #f1f3f5;">Prueba tus Precios Aqui</h1></p>
+    </header>
+   
+
+<script>
+
+</script>
+<br><br>
+
+<!-- Input para ingresar un número -->
+<label for="numero">Ingresa tu total:</label>
+<input type="number" id="numero">
+
+<!-- Botones para realizar operaciones -->
+<button onclick="incrementar()">Incrementar</button>
+<button onclick="decrementar()">Decrementar</button>
+<button onclick="calcularFactorial()">Factorial</button>
+<button onclick="operadorUnario()">Operador Unario</button>
+
+<!-- Resultados -->
+<p>Resultado: <span id="resultado"></span></p>
+
+<script>
+// Función para incrementar el número
+function incrementar() {
+    var numero = document.getElementById("numero").value;
+    numero++;
+    document.getElementById("resultado").textContent = numero;
+}
+
+// Función para decrementar el número
+function decrementar() {
+    var numero = document.getElementById("numero").value;
+    numero--;
+    document.getElementById("resultado").textContent = numero;
+}
+
+// Función para calcular el factorial
+function calcularFactorial() {
+    var numero = document.getElementById("numero").value;
+    var factorial = 1;
+    for (var i = 1; i <= numero; i++) {
+        factorial *= i;
+    }
+    document.getElementById("resultado").textContent = factorial;
+}
+
+// Función para aplicar el operador unario
+function operadorUnario() {
+    var numero = document.getElementById("numero").value;
+    numero = -numero;
+    document.getElementById("resultado").textContent = numero;
+}
+</script>
+</body>
+</html>
